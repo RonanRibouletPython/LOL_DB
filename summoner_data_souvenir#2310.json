@@ -1,0 +1,210 @@
+{
+    "id": 114048338,
+    "summoner_id": "40idMbJVnHMxbQPCKPq-JarK9mAbCDzvTzg4mqXSLyEIGufh",
+    "account_id": "uQsU-azPN_KBQRstCi-7pz0MO_WfapAbq_WjfHfhdeZIScM3yWlv2qb8",
+    "puuid": "u48CD3PRqT1DDcGcD8aRRPgjQw9GTaTm5GE9eErSlAz_7dxu-BALP4lpKixrZlfeCLBRbetohbeNxQ",
+    "game_name": "souvenir",
+    "tagline": "2310",
+    "name": "souvenir13",
+    "internal_name": "souvenir13",
+    "profile_image_url": "https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon5373.jpg",
+    "level": 363,
+    "updated_at": "2024-07-15T03:42:36+09:00",
+    "renewable_at": "2024-07-15T03:44:36+09:00",
+    "previous_seasons": [
+        {
+            "season": 2024,
+            "tier": "SILVER",
+            "division": 3,
+            "lp": 3
+        },
+        {
+            "season": 2023,
+            "tier": "SILVER",
+            "division": 4,
+            "lp": 1
+        },
+        {
+            "season": 2022,
+            "tier": "BRONZE",
+            "division": 3,
+            "lp": 41
+        }
+    ],
+    "league_stats": [
+        {
+            "queue_type": "SOLORANKED",
+            "tier": "SILVER",
+            "division": 3,
+            "lp": 9,
+            "win": 65,
+            "lose": 65,
+            "winrate": 50.0
+        },
+        {
+            "queue_type": "FLEXRANKED",
+            "tier": "SILVER",
+            "division": 2,
+            "lp": 29,
+            "win": 19,
+            "lose": 12,
+            "winrate": 61.29
+        },
+        {
+            "queue_type": "ARENA",
+            "tier": "UNRANKED",
+            "division": 0,
+            "lp": 0,
+            "win": 0,
+            "lose": 3,
+            "winrate": 0
+        }
+    ],
+    "most_champions": [
+        {
+            "champion": "Seraphine",
+            "win": 52,
+            "lose": 38,
+            "winrate": 57.78,
+            "kda": 3.8815789473684212
+        },
+        {
+            "champion": "Lux",
+            "win": 17,
+            "lose": 15,
+            "winrate": 53.12,
+            "kda": 3.0742857142857143
+        },
+        {
+            "champion": "Nami",
+            "win": 8,
+            "lose": 12,
+            "winrate": 40.0,
+            "kda": 3.4424778761061945
+        },
+        {
+            "champion": "Yuumi",
+            "win": 6,
+            "lose": 8,
+            "winrate": 42.86,
+            "kda": 5.387755102040816
+        },
+        {
+            "champion": "Neeko",
+            "win": 1,
+            "lose": 0,
+            "winrate": 100.0,
+            "kda": 2.2857142857142856
+        },
+        {
+            "champion": "Senna",
+            "win": 0,
+            "lose": 1,
+            "winrate": 0.0,
+            "kda": 6.25
+        },
+        {
+            "champion": "Lulu",
+            "win": 0,
+            "lose": 1,
+            "winrate": 0.0,
+            "kda": 8.5
+        },
+        {
+            "champion": "Leona",
+            "win": 0,
+            "lose": 1,
+            "winrate": 0.0,
+            "kda": 2.7333333333333334
+        },
+        {
+            "champion": "Quinn",
+            "win": 0,
+            "lose": 1,
+            "winrate": 0.0,
+            "kda": 1.4
+        }
+    ],
+    "recent_game_stats": [
+        {
+            "champion": "Yuumi",
+            "kill": 1,
+            "death": 5,
+            "assist": 14,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Quinn",
+            "kill": 5,
+            "death": 2,
+            "assist": 4,
+            "position": "MID",
+            "is_win": true
+        },
+        {
+            "champion": "Lux",
+            "kill": 4,
+            "death": 1,
+            "assist": 18,
+            "position": "SUPPORT",
+            "is_win": true
+        },
+        {
+            "champion": "Seraphine",
+            "kill": 6,
+            "death": 4,
+            "assist": 18,
+            "position": "SUPPORT",
+            "is_win": true
+        },
+        {
+            "champion": "Seraphine",
+            "kill": 1,
+            "death": 9,
+            "assist": 15,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Seraphine",
+            "kill": 1,
+            "death": 2,
+            "assist": 14,
+            "position": "SUPPORT",
+            "is_win": true
+        },
+        {
+            "champion": "Seraphine",
+            "kill": 9,
+            "death": 4,
+            "assist": 18,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Leona",
+            "kill": 1,
+            "death": 7,
+            "assist": 13,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Smolder",
+            "kill": 0,
+            "death": 6,
+            "assist": 1,
+            "position": "ADC",
+            "is_win": false
+        },
+        {
+            "champion": "Lux",
+            "kill": 5,
+            "death": 3,
+            "assist": 18,
+            "position": "SUPPORT",
+            "is_win": true
+        }
+    ]
+}
