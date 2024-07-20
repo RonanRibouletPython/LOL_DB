@@ -1,1 +1,4 @@
+# Framework to scrape OPGG website
 opgg.py
+# MySQL DB connector with python
+mysql-connector-python
