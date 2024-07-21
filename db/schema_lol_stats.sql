@@ -5,6 +5,8 @@ USE lol_player_stats;
 CREATE TABLE Summoners (
 	# Unique identifier for each player
     id INT PRIMARY KEY AUTO_INCREMENT,
+    # Player id from the scraping of OPGG
+    opgg_id INT NOT NULL,
     # Player's unique summoner ID
     summoner_id VARCHAR(255) NOT NULL,
     # Player's region 
@@ -31,34 +33,11 @@ CREATE TABLE Summoners (
     renewable_at TIMESTAMP
 );
 
-CREATE TABLE Summoners (
-	# Unique identifier for each player
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    # Player's unique summoner ID
-    summoner_id VARCHAR(255) NOT NULL,
-    # Player's region 
-    region VARCHAR(50) NOT NULL,
-    # Player's account ID
-    account_id VARCHAR(255) NOT NULL,
-    # Player's persistent unique user ID
-    puuid VARCHAR(255) NOT NULL,
-    # In game player's name
-    game_name VARCHAR(255) NOT NULL,
-    # Player's tagline
-    tagline VARCHAR(255),
-    # Player's display name
-    name_ VARCHAR(255) NOT NULL,
-    # Internal name used by the platform
-    internal_name VARCHAR(255) NOT NULL,
-	# URL of the account profile picture
-    profile_icon_url VARCHAR(255),
-    # Player's account level
-    level INT NOT NULL,
-    # Last time player data was updated
-    updated_at TIMESTAMP,
-    # Time when player data is scheduled to be refreshed
-    renewable_at TIMESTAMP
-);
+# Add the index so MySQL can quickly locate the matching opgg_id in the Summoners table, 
+# making the foreign key check much faster
+# Index acts like a lookup-table
+ALTER TABLE Summoners
+ADD INDEX idx_opgg_id (opgg_id);
 
 CREATE TABLE Season_History (
 	# Unique identifier for each season record
@@ -74,7 +53,7 @@ CREATE TABLE Season_History (
     # Final number of lps
     lp INT NOT NULL,
     # Link to the player
-    FOREIGN KEY (player_id) REFERENCES Summoners(id) 
+    FOREIGN KEY (player_id) REFERENCES Summoners(opgg_id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
 
 CREATE TABLE League_Stats (
@@ -97,7 +76,7 @@ CREATE TABLE League_Stats (
     # Winrate pourcentage
     winrate DECIMAL(4,2),
     
-    FOREIGN KEY (player_id) REFERENCES Summoners(id)
+    FOREIGN KEY (player_id) REFERENCES Summoners(opgg_id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
 
 CREATE TABLE Champion_Stats (
@@ -116,7 +95,7 @@ CREATE TABLE Champion_Stats (
     # KDA ratio with the champion
     kda DECIMAL(4,2),
     
-    FOREIGN KEY (player_id) REFERENCES Summoners(id)
+    FOREIGN KEY (player_id) REFERENCES Summoners(opgg_id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
 
 CREATE TABLE Recent_Game_Stats (
@@ -137,7 +116,7 @@ CREATE TABLE Recent_Game_Stats (
     # Is the game win or lost 
     is_win BOOLEAN,
     
-    FOREIGN KEY (player_id) REFERENCES Summoners(id)
+    FOREIGN KEY (player_id) REFERENCES Summoners(opgg_id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
 
 
