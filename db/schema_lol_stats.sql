@@ -79,6 +79,10 @@ CREATE TABLE League_Stats (
     FOREIGN KEY (player_id) REFERENCES Summoners(opgg_id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
 
+# Display the winrate of 100.00
+ALTER TABLE League_Stats
+MODIFY COLUMN winrate DECIMAL(6,2);
+
 CREATE TABLE Champion_Stats (
 	# Unique identifier for each champion stats record
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -97,6 +101,10 @@ CREATE TABLE Champion_Stats (
     
     FOREIGN KEY (player_id) REFERENCES Summoners(opgg_id) ON DELETE CASCADE ON UPDATE NO ACTION
 );
+
+# Display the winrate of 100.00
+ALTER TABLE Champion_Stats
+MODIFY COLUMN winrate DECIMAL(6,2);
 
 CREATE TABLE Recent_Game_Stats (
 	# Unique identifier for each recent game record
