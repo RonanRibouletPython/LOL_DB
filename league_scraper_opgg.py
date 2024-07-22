@@ -13,11 +13,13 @@ from logging_setup import setup_logging
 setup_logging(log_file="logs/league_scraper_opgg.log", level=logging.DEBUG)
 
 # Parameters
-summoner_name = "souvenir#2310"  
+summoner_name = "Eragon#6027"  
 region = Region.EUW
 
+save_summoner_name = summoner_name.replace(' ', "")
 
-def save_to_json(data: Dict, filename: str = f"summoner_data_{summoner_name}.json"):
+
+def save_to_json(data: Dict, filename: str = f"summoner_data_{save_summoner_name}.json"):
     """Saves the given data to a JSON file."""
     try:
         with open(filename, "w") as f:

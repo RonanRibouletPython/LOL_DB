@@ -1,0 +1,198 @@
+{
+    "id": 136730552,
+    "summoner_id": "4EYiUtPvc6tHKozAUrJq9gKSwo6FnTGFX88JceujqfRpJ9FZeWTwUnxRxA",
+    "account_id": "-OjEgM-384AnZYB6o3uzrcGeaNsYI5_U40EO4NTj8kIxQCMukdpeCeBE",
+    "puuid": "g4OdgG-XqNfHNJwgoE1ecy78df0KEV5okIMZkt1Oerj2gQhknClQbNU8kjkUe2NGYp8g4PHA1Fa9ig",
+    "game_name": "Eragon",
+    "tagline": "6027",
+    "name": "Eragon67360",
+    "internal_name": "eragon67360",
+    "profile_image_url": "https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon4301.jpg",
+    "level": 93,
+    "updated_at": "2024-07-19T05:45:42+09:00",
+    "renewable_at": "2024-07-19T05:47:42+09:00",
+    "previous_seasons": [
+        {
+            "season": 2024,
+            "tier": "IRON",
+            "division": 1,
+            "lp": 75
+        },
+        {
+            "season": 2023,
+            "tier": "BRONZE",
+            "division": 3,
+            "lp": 0
+        }
+    ],
+    "league_stats": [
+        {
+            "queue_type": "SOLORANKED",
+            "tier": "BRONZE",
+            "division": 4,
+            "lp": 46,
+            "win": 23,
+            "lose": 27,
+            "winrate": 46.0
+        },
+        {
+            "queue_type": "FLEXRANKED",
+            "tier": "UNRANKED",
+            "division": 0,
+            "lp": 0,
+            "win": 0,
+            "lose": 0,
+            "winrate": 0
+        },
+        {
+            "queue_type": "ARENA",
+            "tier": "UNRANKED",
+            "division": 0,
+            "lp": 0,
+            "win": 0,
+            "lose": 0,
+            "winrate": 0
+        }
+    ],
+    "most_champions": [
+        {
+            "champion": "Camille",
+            "win": 12,
+            "lose": 13,
+            "winrate": 48.0,
+            "kda": 1.6075949367088607
+        },
+        {
+            "champion": "Karma",
+            "win": 3,
+            "lose": 5,
+            "winrate": 37.5,
+            "kda": 3.5641025641025643
+        },
+        {
+            "champion": "Lux",
+            "win": 6,
+            "lose": 1,
+            "winrate": 85.71,
+            "kda": 2.358974358974359
+        },
+        {
+            "champion": "Rakan",
+            "win": 0,
+            "lose": 4,
+            "winrate": 0.0,
+            "kda": 1.9545454545454546
+        },
+        {
+            "champion": "Morgana",
+            "win": 1,
+            "lose": 2,
+            "winrate": 33.33,
+            "kda": 2.1666666666666665
+        },
+        {
+            "champion": "Caitlyn",
+            "win": 1,
+            "lose": 0,
+            "winrate": 100.0,
+            "kda": 2.8
+        },
+        {
+            "champion": "Nami",
+            "win": 0,
+            "lose": 1,
+            "winrate": 0.0,
+            "kda": 0.5
+        },
+        {
+            "champion": "Miss Fortune",
+            "win": 0,
+            "lose": 1,
+            "winrate": 0.0,
+            "kda": 1.0
+        }
+    ],
+    "recent_game_stats": [
+        {
+            "champion": "Ashe",
+            "kill": 9,
+            "death": 2,
+            "assist": 6,
+            "position": "ADC",
+            "is_win": false
+        },
+        {
+            "champion": "Karma",
+            "kill": 1,
+            "death": 3,
+            "assist": 3,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Ashe",
+            "kill": 9,
+            "death": 2,
+            "assist": 13,
+            "position": "ADC",
+            "is_win": true
+        },
+        {
+            "champion": "Karma",
+            "kill": 1,
+            "death": 0,
+            "assist": 8,
+            "position": "SUPPORT",
+            "is_win": true
+        },
+        {
+            "champion": "Karma",
+            "kill": 2,
+            "death": 1,
+            "assist": 13,
+            "position": "SUPPORT",
+            "is_win": true
+        },
+        {
+            "champion": "Camille",
+            "kill": 3,
+            "death": 3,
+            "assist": 2,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Karma",
+            "kill": 1,
+            "death": 4,
+            "assist": 3,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Karma",
+            "kill": 4,
+            "death": 6,
+            "assist": 16,
+            "position": "SUPPORT",
+            "is_win": false
+        },
+        {
+            "champion": "Miss Fortune",
+            "kill": 8,
+            "death": 10,
+            "assist": 16,
+            "position": "ADC",
+            "is_win": false
+        },
+        {
+            "champion": "Karma",
+            "kill": 2,
+            "death": 7,
+            "assist": 16,
+            "position": "SUPPORT",
+            "is_win": false
+        }
+    ],
+    "region": "EUW"
+}

@@ -380,9 +380,9 @@ def insert_data_recent_games_table(file_path: str)-> str:
     return(cursor.rowcount, "record inserted.")
 
 if __name__ == "__main__":
-    file_path = "summoner_data_souvenir#2310.json"
-    #insert_data_summoners_table(file_path)
-    #insert_data_season_history_table(file_path=file_path)
-    #insert_data_league_stats_table(file_path)
-    #insert_data_champion_stats_table(file_path)
+    file_path = "summoner_data_Eragon#6027.json"
+    insert_data_summoners_table(file_path)
+    insert_data_season_history_table(file_path=file_path)
+    insert_data_league_stats_table(file_path)
+    insert_data_champion_stats_table(file_path)
     insert_data_recent_games_table(file_path)

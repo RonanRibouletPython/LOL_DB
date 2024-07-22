@@ -1,8 +1,11 @@
 import mysql.connector as sql
 import logging
+
+import sys
+sys.path.append('..')
 from logging_setup import setup_logging
 
-setup_logging(log_file="logs/db_connection.log", level=logging.DEBUG)
+setup_logging(log_file="../logs/db_connection.log", level=logging.DEBUG)
 
 try:
     lol_db = sql.connect(
