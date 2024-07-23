@@ -2,3 +2,5 @@
 opgg.py
 # MySQL DB connector with python
 mysql-connector-python
+# Pandas
+pandas

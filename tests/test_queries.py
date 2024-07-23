@@ -1,5 +1,6 @@
 import mysql.connector as sql
 import logging
+import pandas as pd
 
 import sys
 sys.path.append('..')
@@ -26,7 +27,7 @@ except sql.Error as err:
 # Create a cursor object
 cursor = lol_db.cursor()
 
-def test_query1()-> None:
+def insert_name(username)-> str:
    
     query_players_names = """
             SELECT DISTINCT champion_stats.player_id, summoners.name_
@@ -42,17 +43,22 @@ def test_query1()-> None:
     except Exception as err:
         logging.error(f"Error fetching player data: {err}")
   
-    print("Player Names and IDs:")
-    for row in player_data:
-        print(f'Player ID: {row[0]}\tPlayer Name: {row[1]}')
+    try:
+        for player_id, name in player_data:
+            if name == username:
+                return player_id, name
+    except:
+        logging.error(f"Error finding username in player data: {username}")
 
-def test_query2() -> None:
+    
+
+def extract_champions_data(id) -> list:
 
     # Add the , to make python think it is a tuple
-    player_id: tuple[str] = ("136730552",)
+    player_id: tuple[str] = (id,)
 
     query_ordered_list_champs = """
-        SELECT champion, win, lose, winrate, kda
+        SELECT id, champion, win, lose, winrate, kda
         FROM champion_stats
         WHERE player_id = %s
         ORDER BY winrate DESC, kda DESC;
@@ -64,11 +70,34 @@ def test_query2() -> None:
     except Exception as err:
         logging.error(f"Error fetching champion data {err}")
 
-    for row in champion_data:
-        print(f"Champion: {row[0]}\t Wins: {row[1]}\t Losses: {row[2]}\t Winrate: {row[3]}\t KDA: {row[4]}")
+    return champion_data
 
+def transform_champions_data(champion_data: list) -> None:
+
+    df = pd.DataFrame(champion_data, columns=['id', 'champions_name', 'nbr_of_wins', 'nbr_of_losses', 'winrate', 'KDA'])
+
+    # We keep the id to make sure that the oldest data is dropped
+    df = df.drop_duplicates(ignore_index=True, keep='last', subset=['champions_name', 'nbr_of_wins', 'nbr_of_losses', 'winrate', 'KDA'])
+
+    df.dropna(inplace=True)
+
+    return df
+
+def load_champions_data(name, df)-> None:
+
+    filame = f"champions_data_{name}"
+    try:
+        df.to_csv(filame, sep=',', index=False)
+        logging.info(f"csv data saved to {filame}")
+    except Exception as err:
+        logging.error(f"Error saving data to csv: {err}")
+
+def ETL_pipeline_champions_data()-> None:
+
+    champion_data = extract_champions_data(id)
+    df =transform_champions_data(champion_data)
+    load_champions_data(name, df)
 
 if __name__ == "__main__":
-
-    test_query1()
-    test_query2()
+    id, name = insert_name("souvenir13")
+    ETL_pipeline_champions_data()
