@@ -7,7 +7,7 @@ sys.path.append('..')
 from logging_setup import setup_logging
 
 # Logging setup
-setup_logging(log_file="../logs/test_queries.log", level=logging.DEBUG)
+setup_logging(log_file="../logs/list_best_champs.log", level=logging.DEBUG)
 
 # SQL connection to the lol_player_stats DB
 try:
@@ -98,6 +98,34 @@ def ETL_pipeline_champions_data()-> None:
     df =transform_champions_data(champion_data)
     load_champions_data(name, df)
 
+def test_season_data(id)-> str:
+
+    # Add the , to make python think it is a tuple
+    player_id: tuple[str] = (id,)
+
+    query_test = """
+    SELECT *, (win + lose) AS number_of_games_played
+	FROM league_stats
+    WHERE player_id = %s;
+    """
+
+    # Idea of transformation that could be added:
+    # The number of lps that are needed to go to the next tier if not unranked
+    # if unranked the number of games left to play to get ranked
+
+    cursor.execute(query_test, player_id)
+
+    try:
+        season_data = cursor.fetchall()
+    except Exception as err:
+        logging.error(f"Error fetching season data {err}")
+
+    return season_data
+
 if __name__ == "__main__":
     id, name = insert_name("souvenir13")
-    ETL_pipeline_champions_data()
+    #ETL_pipeline_champions_data()
+
+    test = test_season_data(id)
+
+    print(test)
