@@ -2,12 +2,10 @@ import mysql.connector as sql
 import logging
 import pandas as pd
 
-import sys
-sys.path.append('..')
 from logging_setup import setup_logging
 
 # Logging setup
-setup_logging(log_file="../logs/test_queries.log", level=logging.DEBUG)
+setup_logging(log_file="logs/list_best_champs.log", level=logging.DEBUG)
 
 # SQL connection to the lol_player_stats DB
 try:
