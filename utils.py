@@ -4,6 +4,14 @@ from opgg.summoner import Summoner
 from typing import Dict
 from datetime import datetime
 
+import requests # request img from web
+import shutil # save img locally
+
+def img_download_from_url(url: str, filename: str) -> None:
+    """Download an image from a URL and save it locally."""
+    response = requests.get(url, stream=True)
+    response.raise_for_status()
+
 def extract_summoner_data(summoner: Summoner) -> Dict:
     """Extracts relevant data from a Summoner object into a dictionary."""
 

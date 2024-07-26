@@ -4,3 +4,5 @@ opgg.py
 mysql-connector-python
 # Pandas
 pandas
+# type checking
+mypy

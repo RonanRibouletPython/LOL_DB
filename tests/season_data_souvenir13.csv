@@ -1,0 +1,4 @@
+id,player_id,queue_type,tier,division,lp,win,lose,winrate,number_of_games_played
+13,114048338,SOLORANKED,SILVER,4,84,65,65,50.00,130
+14,114048338,FLEXRANKED,SILVER,2,29,19,12,61.29,31
+15,114048338,ARENA,UNRANKED,0,0,0,3,0.00,3
